@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <link href="./src/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/1343494eca.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="overflow-x-hidden">
     <main>
 
-<div class="bg-purple-100 min-h-screen flex flex-col items-center text-center py-16">
+<div class="bg-white-100 min-h-screen flex flex-col items-center text-center py-16 overflow-x-hidden w-full max-w-screen-xl mx-auto ml-0 mr-0">
     <header class="w-full flex justify-between items-center px-8 py-4 bg-white fixed top-0">
         <div class="flex items-center space-x-2">
             <img src="https://vpncdn.protonweb.com/image-transformation/?s=c&image=image%2Fupload%2Fstatic%2Flogos%2Ficons%2Fvpn_f9embt.svg" alt="Logo" class="h-8 w-8">
             <img src="https://vpncdn.protonweb.com/image-transformation/?s=c&image=image%2Fupload%2Fstatic%2Flogos%2Ftexts%2Fproton-black_zvq72v.svg" alt="logo" class="h-12 w-15 ">
             <img src="https://vpncdn.protonweb.com/image-transformation/?s=c&image=image%2Fupload%2Fstatic%2Flogos%2Ftexts%2Fvpn-purple_afexu9.svg" alt="logo" class="h-10 w-10">
+            
         
         </div>
-        <nav class="flex space-x-4 text-sm text-gray-700">
+        <nav class="hidden lg:flex md:flex md:flex-wrap space-x-4 text-sm text-gray-700">
             <a href="#" class="hover:text-black">Why Proton VPN</a>
             <a href="#" class="hover:text-black">Pricing</a>
             <a href="#" class="hover:text-black">Download</a>
@@ -28,11 +29,29 @@
             <a href="#" class="hover:text-black">Discover Proton</a>
         </nav>
         <div class="flex items-center space-x-4">
-            <a href="#">Discover Proton</a>
-            <button class="bg-blue-700 text-white px-4 py-2 rounded-full hover:bg-purple-800">Get Proton VPN</button>
+            <button id="menu-btn" class="md:hidden text-2xl text-gray-800 ">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="#" class="hidden md:flex">Discover Proton</a>
+            <button class="bg-blue-700 text-white px-4 py-2 rounded-full hover:bg-purple-800 hidden md:flex">Get Proton VPN</button>
             <a href="#" class="text-purple-700 hover:text-purple-900">Sign in</a>
         </div>
     </header>
+
+
+
+    <!-- mobile menu, right after header -->
+<div id="mobile-menu" class="hidden md:hidden bg-white w-full px-4 py-6 space-y-4 mr-4 text-gray-700">
+  <a href="#" class="block">Why Proton VPN</a>
+  <a href="#" class="block">Pricing</a>
+  <a href="#" class="block">Download</a>
+  <a href="#" class="block">Resources</a>
+  <a href="#" class="block">Business VPN</a>
+  <a href="#" class="block text-purple-700">Sign in</a>
+  <button class="bg-blue-700 text-white px-4 py-2 rounded-full w-full">
+    Get Proton VPN
+  </button>
+</div>
     <main class="pt-32">
         <p class="text-sm text-blue-700 mb-4 font-bold">From the creators of Proton Mail</p>
         <h1 class="text-4xl text-blue-900 text-black font-bold mb-6 font-serif text-6xl">One VPN. Limitless<br> possibilities.</h1>
@@ -354,6 +373,9 @@
         </div>
     </main>
 </div>
+<script src="./src/script.js"></script>
+</body>
+</html>
 
 
 
